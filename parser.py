@@ -15,9 +15,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-import string
 import re
-import numpy as np
 import matplotlib.pyplot as plt
 
 #  We use a regex here to clean characters and keep only numerics
