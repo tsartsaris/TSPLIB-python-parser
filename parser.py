@@ -114,7 +114,7 @@ def produce_final(file="ulysses16.tsp"):
 	cities_tups = city_tup(cities_set)
 	cities_dict = create_cities_dict(cities_tups)
 	plot_cities(cities_tups)
-	print cities_dict
+	print (str(cities_dict))
 	
 
 
