@@ -17,6 +17,7 @@
 """
 import re
 import matplotlib.pyplot as plt
+import argparse
 
 #  We use a regex here to clean characters and keep only numerics
 
@@ -114,12 +115,18 @@ def produce_final(file="ulysses16.tsp"):
 	cities_tups = city_tup(cities_set)
 	cities_dict = create_cities_dict(cities_tups)
 	plot_cities(cities_tups)
-	print cities_dict
+	print (str(cities_dict))
 	
 
 
 
 if __name__ == '__main__':
-	produce_final()
-	# or produce_final("berlin52.tsp") or whatever filename you wish to have
-	
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-f","--file",help="tsp file to plot.",type=str,nargs=1)
+    args = parser.parse_args()
+    f = args.file
+    if f != None :
+        produce_final(f[0])
+    else :
+        produce_final()
+#    # or produce_final("berlin52.tsp") or whatever filename you wish to have
