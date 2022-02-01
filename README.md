@@ -6,7 +6,6 @@ TSPLIB-python-parser
 
 
 This is a parser to read 2D Symmetric traveling salesman problem STSP problems data into python dict
-so from a file like 
 
 ## How to use it
 - command line 
