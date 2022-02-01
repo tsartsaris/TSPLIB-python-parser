@@ -24,7 +24,8 @@ if __name__ == '__main__':
     if f is not None:
         TSPParser(filename=f, plot_tsp=p)
     else:
-        print("Please provide a file")
+        f = "ulysses16.tsp"
+        TSPParser(filename=f, plot_tsp=p)
 
 
 
