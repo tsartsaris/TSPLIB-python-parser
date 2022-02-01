@@ -3,7 +3,7 @@ TSPLIB-python-parser
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
-
+[![codecov](https://codecov.io/gh/tsartsaris/TSPLIB-python-parser/branch/master/graph/badge.svg?token=WHYO2U5B4S)](https://codecov.io/gh/tsartsaris/TSPLIB-python-parser)
 
 This is a parser to read 2D Symmetric traveling salesman problem STSP problems data into python dict
 
