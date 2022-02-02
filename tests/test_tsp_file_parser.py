@@ -1,4 +1,4 @@
-from tsplib_parser.tsp_file_parser import TSPParser, read_tsp_file_contents, check_filename_tsp
+from tsplib_parser.tsp_file_parser import TSPParser, read_tsp_file_contents, check_filename_tsp, plot_cities
 
 
 def test_on_file_selected():
@@ -44,3 +44,9 @@ def test_check_filename_tsp():
     filename = "./ulysses16.tsp"
     assert check_filename_tsp(filename) is True
     assert check_filename_tsp(filename.replace(".tsp", "")) is False
+
+
+def test_plot_cities():
+    axis = plot_cities({1: (1,1)}, True)
+    assert axis == (0.0, 1.0, 0.0, 1.0)
+

@@ -4,16 +4,20 @@ from typing import List, Dict
 from matplotlib import pyplot as plt
 
 
-def plot_cities(cities_dict: Dict) -> None:
+def plot_cities(cities_dict: Dict, test:bool = False) -> None:
     """
     plot with matplotlib the parsed TSP file
+    :param test: if testing is True
     :param cities_dict: {'1': (38.24, 20.42), '2': (39.57, 26.15),...}
     :return: NADA plot cities coordinates
     """
     plt.clf()
+    plt.axis = (0.0, 1.0, 0.0, 1.0)
     sorted_tuples = sorted(cities_dict.values(), key=lambda tup: tup[1])
     plt.scatter(*zip(*sorted_tuples), s=40, zorder=1)
     plt.plot(*zip(*cities_dict.values()), 'm--', zorder=0)
+    if test is True:
+        return plt.axis  # for the test
     plt.show()
 
 
