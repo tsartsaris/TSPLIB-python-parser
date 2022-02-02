@@ -8,7 +8,7 @@ def parse_boolean(value: str) -> bool:
 
     if value in ["true", "yes", "y", "1", "t"]:
         return True
-    elif value in ["false", "no", "n", "0", "file_name"]:
+    elif value in ["false", "no", "n", "0", "f"]:
         return False
 
     return False
