@@ -4,7 +4,7 @@ from typing import List, Dict
 from matplotlib import pyplot as plt
 
 
-def plot_cities(cities_dict: Dict):
+def plot_cities(cities_dict: Dict) -> None:
     """
     plot with matplotlib the parsed TSP file
     :param cities_dict: {'1': (38.24, 20.42), '2': (39.57, 26.15),...}
@@ -17,7 +17,7 @@ def plot_cities(cities_dict: Dict):
     plt.show()
 
 
-def check_filename_tsp(filename):
+def check_filename_tsp(filename: str) -> bool:
     """
         Check if the file provided is a valid TSP file
         ...ends with .tsp
@@ -29,7 +29,7 @@ def check_filename_tsp(filename):
         return False
 
 
-def read_tsp_file_contents(filename):
+def read_tsp_file_contents(filename: str) -> List:
     """
     gets the contents of the file into a list
     :param filename: the filename to read
@@ -53,7 +53,7 @@ class TSPParser:
     {'1': (38.24, 20.42), '2': (39.57, 26.15),...}
 
     Usage like
-    TSPParser(filename=f)
+    TSPParser(filename=file_name)
     print(TSPParser.tsp_cities_dict)
     """
     should_plot: bool = False
@@ -64,14 +64,14 @@ class TSPParser:
     tsp_cities_dict: Dict = {}
 
     @classmethod
-    def __init__(cls, filename: str, plot_tsp: bool):
+    def __init__(cls, filename: str, plot_tsp: bool) -> None:
         cls.clear_data()
         cls.filename = filename
         cls.should_plot = plot_tsp
         cls.on_file_selected()
 
     @classmethod
-    def on_file_selected(cls):
+    def on_file_selected(cls) -> None:
         """
         internal use when instantiating class object
         :return: NADA goes to open the file
@@ -79,7 +79,7 @@ class TSPParser:
         cls.open_tsp_file()
 
     @classmethod
-    def open_tsp_file(cls):
+    def open_tsp_file(cls) -> None:
         """
         if file is tsp will read the contents
         :return: NADA assign to tsp_file_contents
@@ -92,7 +92,7 @@ class TSPParser:
             cls.detect_dimension()
 
     @classmethod
-    def detect_dimension(cls):
+    def detect_dimension(cls) -> None:
         """
         finds the list element that starts with DIMENSION and gets the int
         :return: NADA goes to get the dict
@@ -105,7 +105,7 @@ class TSPParser:
         cls.get_cities_dict()
 
     @classmethod
-    def get_cities_dict(cls):
+    def get_cities_dict(cls) -> None:
         """
         zero index is the index in the contents list where city coordinates starts
         last index of parser is the zero index + dimension of the file
@@ -123,7 +123,7 @@ class TSPParser:
             plot_cities(cls.tsp_cities_dict)
 
     @classmethod
-    def clear_data(cls):
+    def clear_data(cls) -> None:
         """
         re-use the class
         :return: NADA

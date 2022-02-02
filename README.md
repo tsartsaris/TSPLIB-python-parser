@@ -15,7 +15,7 @@ parser.py --file <filename> --plot true
 ```
 - from python script 
 ```python 
-TSPParser(filename=f, plot_tsp=p)
+TSPParser(filename="filename", plot_tsp=True)
 ```
 
 ## What it does
