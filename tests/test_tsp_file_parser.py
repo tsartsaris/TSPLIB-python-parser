@@ -43,5 +43,4 @@ def test_read_tsp_file_contents():
 def test_check_filename_tsp():
     filename = "./ulysses16.tsp"
     assert check_filename_tsp(filename) is True
-    filename = "whatever"
-    assert check_filename_tsp(filename) is False
+    assert check_filename_tsp(filename.replace(".tsp", "")) is False
